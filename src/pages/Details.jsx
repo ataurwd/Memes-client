@@ -49,9 +49,9 @@ const Details = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.5 }}
           >
-            {meme.hashtags.map((tag, index) => (
+            {meme.hashtags ? <>{meme?.hashtags.map((tag, index) => (
               <span key={index} className="badge badge-primary">{tag}</span>
-            ))}
+            ))}</> :""}
           </motion.div>
 
           {/* Category */}
